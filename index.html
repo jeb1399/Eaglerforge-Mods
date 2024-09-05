@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👍👍👍</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .mod-list {
+            margin-top: 20px;
+        }
+        .mod-item {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .mod-item a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        .mod-item a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Eaglerforge Mods List</h1>
+</header>
+
+<div class="mod-list" id="modList">
+    <mod-link src="./mods/MORE_FPS.js"></mod-link>
+</div>
+
+<script>
+    document.querySelectorAll('mod-link').forEach(modLink => {
+        const src = modLink.getAttribute('src');
+        if (src) {
+            const modItem = document.createElement('div');
+            modItem.className = 'mod-item';
+            modItem.innerHTML = `
+                <span>${src.split('/').pop()}</span>
+                <a href="${src}" download>Download</a>
+            `;
+            document.getElementById('modList').appendChild(modItem);
+        }
+        modLink.remove();
+    });
+</script>
+</body>
+</html>
