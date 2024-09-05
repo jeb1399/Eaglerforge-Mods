@@ -14,6 +14,7 @@
 	modVersion.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
 	modVersion.style.fontFamily = 'Arial, sans-serif';
 	modVersion.style.maxWidth = '300px';
+	modVersion.style.maxHeight = "50px";
 	modVersion.style.right = '10px';
 	modVersion.style.top = '10px';
 	const versionNum = document.createElement('p');
