@@ -15,7 +15,7 @@
 		position: fixed;
 		z-index: 1000000;
 		right: 10px;
-		bottom: 10px;
+		bottom: 35px;
 		color: #ffffff;
 		font: 12pt 'Minecraftia', sans-serif;
 		font-size: 12px;
